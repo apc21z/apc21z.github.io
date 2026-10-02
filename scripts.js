@@ -87,4 +87,59 @@ function renderExperienceTable() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', renderExperienceTable);
+function setupFloatingToolbar() {
+  const buttons = document.querySelectorAll('.nav-button');
+  const sections = {
+    'contact-section': document.getElementById('contact-section'),
+    'profile-section': document.getElementById('profile-section'),
+    'experience-section': document.getElementById('experience-section')
+  };
+
+  const setActiveButton = (key) => {
+    buttons.forEach((button) => {
+      const isActive = button.dataset.target === key;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.target;
+      const section = sections[targetId];
+
+      if (!section) {
+        return;
+      }
+
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveButton(targetId);
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visibleEntry) {
+        return;
+      }
+
+      setActiveButton(visibleEntry.target.id);
+    },
+    { threshold: [0.25, 0.5, 0.8] }
+  );
+
+  Object.values(sections).forEach((section) => {
+    if (section) {
+      observer.observe(section);
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderExperienceTable();
+  setupFloatingToolbar();
+});

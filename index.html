@@ -12,7 +12,7 @@
   <body>
     <div class="page-shell">
       <div class="resume-card">
-        <aside class="sidebar">
+        <aside class="sidebar" id="contact-section">
           <div class="profile-photo">
             <img src="avatar.jpg" alt="Antonio Jesús Pajuelo Chávez" />
           </div>
@@ -21,7 +21,7 @@
             <h3>CONTACTO</h3>
             <div class="contact-item">
               <span class="label">Linkedin</span>
-              <a href="https://www.linkedin.com/in/antoniojesuspajuelochavez" target="_blank" rel="noreferrer noopener">www.linkedin.com/in/antoniojesus-pajuelochavez</a>
+              <a href="https://www.linkedin.com/in/antoniojesuspajuelochavez" target="_blank" rel="noreferrer noopener">www.linkedin.com/in/antoniojesuspajuelochavez</a>
             </div>
             <div class="contact-item">
               <span class="label">Email</span>
@@ -62,7 +62,7 @@
           </section>
         </aside>
 
-        <main class="content">
+        <main class="content" id="profile-section">
           <header class="hero">
             <h1>ANTONIO JESUS<br />PAJUELO CHAVEZ</h1>
             <p class="hero-title">INGENIERO DEL SOFTWARE</p>
@@ -79,7 +79,7 @@
             </p>
           </section>
 
-          <section class="resume-section">
+          <section class="resume-section" id="experience-section">
             <h2>EXPERIENCIA LABORAL</h2>
             <div class="experience-table-wrap">
               <table class="experience-table" id="experienceTable">
@@ -125,9 +125,9 @@
       </div>
 
       <div class="floating-toolbar" aria-label="Acciones rápidas">
-        <button type="button" aria-label="Contacto">◉</button>
-        <button type="button" aria-label="Perfil">◌</button>
-        <button type="button" aria-label="Proyectos">◍</button>
+        <button type="button" class="nav-button active" data-target="contact-section" aria-label="Contacto">◉</button>
+        <button type="button" class="nav-button" data-target="profile-section" aria-label="Perfil">◌</button>
+        <button type="button" class="nav-button" data-target="experience-section" aria-label="Proyectos">◍</button>
       </div>
     </div>
     <script src="scripts.js"></script>
