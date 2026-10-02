@@ -246,8 +246,19 @@ img {
   line-height: 1.5;
 }
 
+.company-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.company-cell > span {
+  min-width: 0;
+}
+
 .project-link {
   display: inline-flex;
+  flex: 0 0 24px;
   align-items: center;
   justify-content: center;
   width: 24px;
@@ -265,16 +276,6 @@ img {
 .project-link:focus-visible {
   background: rgba(26, 79, 143, 0.18);
   transform: translateY(-1px);
-}
-
-.project-link--empty {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  color: rgba(29, 42, 58, 0.45);
-  font-weight: 700;
 }
 
 .pagination {

@@ -38,18 +38,18 @@ function renderExperienceTable() {
     .map(
       (item) => `
         <tr>
-          <td>${item.empresa}</td>
+          <td class="company-cell">
+            <span>${item.empresa}</span>
+            ${item.url && item.url.trim()
+              ? `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer noopener" aria-label="Abrir proyecto de ${item.empresa}" title="Abrir página o proyecto">↗</a>`
+              : ''}
+          </td>
           <td>${item.puesto}</td>
           <td>${item.fechas}</td>
           <td>
             <ul class="tech-list">
               ${item.tecnologias.map((tech) => `<li>${tech}</li>`).join('')}
             </ul>
-          </td>
-          <td>
-            ${item.url && item.url.trim()
-              ? `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer noopener" aria-label="Abrir proyecto de ${item.empresa}">↗</a>`
-              : '<span class="project-link project-link--empty" aria-hidden="true">—</span>'}
           </td>
           <td>${item.descripcion}</td>
         </tr>
