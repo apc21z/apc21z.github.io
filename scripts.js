@@ -3,7 +3,7 @@ const experienceData = [
     empresa: 'LookWarming S.L.',
     puesto: 'Programador Web',
     fechas: '2021-2023',
-    tecnologias: ['Spring Boot', 'Angular', 'MySQL', 'Java', 'HTML', 'CSS'],
+    tecnologias: ['Spring Boot 2.5', 'Angular 12', 'MySQL', 'Java 17', 'HTML', 'CSS'],
     descripcion: 'Desarrollo del backend con Spring Boot, implementación de funcionalidades web con Angular y gestión de bases de datos en MySQL.',
     url: 'https://www.lookwarning.es/'
   },
@@ -11,7 +11,7 @@ const experienceData = [
     empresa: 'Universidad Rey Juan Carlos',
     puesto: 'Becario de colaboración',
     fechas: '2023-2024',
-    tecnologias: ['PHP', 'Oracle SQL', 'SQL', 'Spring Boot', 'APIs'],
+    tecnologias: ['PHP', 'Oracle SQL', 'HTML', 'CSS', 'Zend Framework'],
     descripcion: 'Implantación y mantenimiento de aplicaciones y servicios, resolución de incidencias y trabajo con Oracle SQL y PHP.',
     url: ''
   }
