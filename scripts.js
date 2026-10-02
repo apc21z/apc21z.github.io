@@ -4,14 +4,16 @@ const experienceData = [
     puesto: 'Programador Web',
     fechas: '2021-2023',
     tecnologias: ['Spring Boot', 'Angular', 'MySQL', 'Java', 'HTML', 'CSS'],
-    descripcion: 'Desarrollo del backend con Spring Boot, implementación de funcionalidades web con Angular y gestión de bases de datos en MySQL.'
+    descripcion: 'Desarrollo del backend con Spring Boot, implementación de funcionalidades web con Angular y gestión de bases de datos en MySQL.',
+    url: 'https://www.lookwarning.es/'
   },
   {
     empresa: 'Universidad Rey Juan Carlos',
     puesto: 'Becario de colaboración',
     fechas: '2023-2024',
     tecnologias: ['PHP', 'Oracle SQL', 'SQL', 'Spring Boot', 'APIs'],
-    descripcion: 'Implantación y mantenimiento de aplicaciones y servicios, resolución de incidencias y trabajo con Oracle SQL y PHP.'
+    descripcion: 'Implantación y mantenimiento de aplicaciones y servicios, resolución de incidencias y trabajo con Oracle SQL y PHP.',
+    url: ''
   }
 ];
 
@@ -43,6 +45,11 @@ function renderExperienceTable() {
             <ul class="tech-list">
               ${item.tecnologias.map((tech) => `<li>${tech}</li>`).join('')}
             </ul>
+          </td>
+          <td>
+            ${item.url && item.url.trim()
+              ? `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer noopener" aria-label="Abrir proyecto de ${item.empresa}">↗</a>`
+              : '<span class="project-link project-link--empty" aria-hidden="true">—</span>'}
           </td>
           <td>${item.descripcion}</td>
         </tr>
