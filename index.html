@@ -3,60 +3,133 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portafolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <title>Antonio Jesús Pajuelo Chávez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <img src="avatar.jpg" alt="foto" class="avatar" />
-        <h1>apc21z</h1>
-        <p class="subtitle">Desarrollador Web | Frontend | Backend</p>
-      </div>
-    </header>
-    <nav class="material-nav">
-      <a href="#proyectos" class="active">Proyectos</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="cv.html">CV</a>
-    </nav>
-    <main>
-      <section id="proyectos">
-        <h2>Proyectos Destacados</h2>
-        <div class="proyectos-grid">
-          <div class="proyecto">
-            <h3>Proyecto 1</h3>
-            <p>url o descripcion de un proyecto de github</p>
-            <a href="#">Ver más</a>
+    <div class="page-shell">
+      <div class="resume-card">
+        <aside class="sidebar">
+          <div class="profile-photo">
+            <img src="avatar.jpg" alt="Antonio Jesús Pajuelo Chávez" />
           </div>
-        </div>
-      </section>
-      <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul class="habilidades-lista">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Nestjs</li>
-          <li>Node.js</li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 apc21z</p>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+
+          <section class="sidebar-section">
+            <h3>CONTACTO</h3>
+            <div class="contact-item">
+              <span class="label">Linkedin</span>
+              <a href="#">www.linkedin.com/in/antoniojesus-pajuelochavez</a>
+            </div>
+            <div class="contact-item">
+              <span class="label">Email</span>
+              <a href="mailto:aj.pajuelo.1999@gmail.com">aj.pajuelo.2019@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="label">Dirección</span>
+              <span>Madrid, 28925</span>
+            </div>
+          </section>
+
+          <section class="sidebar-section">
+            <h3>COMPETENCIAS TÉCNICAS</h3>
+            <ul class="skill-list">
+              <li>LANGUAGES</li>
+              <li>Java • C# • C++ • PHP</li>
+              <li>FRONTEND</li>
+              <li>HTML • HTML5 • CSS3 • JavaScript • jQuery</li>
+              <li>BACKEND</li>
+              <li>Spring Boot • .NET • Angular • PHP</li>
+              <li>BASES DE DATOS</li>
+              <li>MySQL • Oracle SQL • PostgreSQL • Mongo DB</li>
+              <li>HERRAMIENTAS Y SISTEMAS</li>
+              <li>Docker • Linux • Windows • AWS</li>
+            </ul>
+          </section>
+
+          <section class="sidebar-section">
+            <h3>IDIOMAS</h3>
+            <p>Español: Nativo</p>
+            <p>Inglés: B2</p>
+          </section>
+
+          <section class="sidebar-section">
+            <h3>INFORMACIÓN ADICIONAL</h3>
+            <p>Permiso de conducir B</p>
+            <p>Coche propio</p>
+          </section>
+        </aside>
+
+        <main class="content">
+          <header class="hero">
+            <h1>ANTONIO JESUS<br />PAJUELO CHAVEZ</h1>
+            <p class="hero-title">INGENIERO DEL SOFTWARE</p>
+            <div class="divider"></div>
+          </header>
+
+          <section class="resume-section">
+            <h2>PERFIL PROFESIONAL</h2>
+            <p>
+              Ingeniero de Software con experiencia en desarrollo web full stack y soporte a aplicaciones.
+              He colaborado en el desarrollo de aplicaciones web y su mantenimiento, la gestión de bases de datos y la
+              resolución de incidencias, aportando un enfoque práctico, ordenado y orientado a la calidad
+              del código.
+            </p>
+          </section>
+
+          <section class="resume-section">
+            <h2>EXPERIENCIA LABORAL</h2>
+            <div class="experience-table-wrap">
+              <table class="experience-table" id="experienceTable">
+                <thead>
+                  <tr>
+                    <th>Empresa</th>
+                    <th>Puesto</th>
+                    <th>Fechas</th>
+                    <th>Tecnologías</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody id="experienceTableBody"></tbody>
+              </table>
+            </div>
+            <div class="pagination" id="experiencePagination" aria-label="Paginación de experiencia"></div>
+          </section>
+
+          <section class="resume-section">
+            <h2>EDUCACIÓN</h2>
+            <div class="education-table-wrap">
+              <table class="education-table">
+                <thead>
+                  <tr>
+                    <th>Centro</th>
+                    <th>Título</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Universidad Rey Juan Carlos</td>
+                    <td>Grado en ingeniería de software</td>
+                  </tr>
+                  <tr>
+                    <td>I.E.S. Sm. Trinidad</td>
+                    <td>Bachillerato de Ciencias Tecnológicas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="floating-toolbar" aria-label="Acciones rápidas">
+        <button type="button" aria-label="Contacto">◉</button>
+        <button type="button" aria-label="Perfil">◌</button>
+        <button type="button" aria-label="Proyectos">◍</button>
+      </div>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
